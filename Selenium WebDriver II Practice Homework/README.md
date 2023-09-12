@@ -1,11 +1,22 @@
-# Automated Testing for Staging Forum
+# Jira Automated Testing Framework
 
-## Test Location
+## Test Cases
 
-The test cases for the Staging Forum are located in the following directory: 
-```bash
-src/test/java/test.cases/stagingforum
-```
+- **Test**: loginToJira
+- **Test**: createNewProject
+- **Test**: createNewStory
+- **Test**: createNewBug
+- **Test**: linkBugToStory
 
+## Tech Stack
+- Java
+- Selenium WebDriver
+- Maven
 
-Follow the directory structure to navigate to the test cases and execute them.
+## Running the Tests
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `mvn test` to execute the test suite.
+
+## Note
+The tests are annotated with order for execution.
