@@ -1,0 +1,28 @@
+2023-09-12 17:28:25,204 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:30,163 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:30,171 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:31,196 INFO  [main] Clicking on element jira_signin_button
+2023-09-12 17:28:33,633 INFO  [main] Clicking on element jira_continue_button
+2023-09-12 17:28:33,922 INFO  [main] Clicking on element jira_continue_button
+2023-09-12 17:28:39,133 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:39,238 INFO  [main] Clicking on element //span[@class='css-178ag6o' and text()='Create project']
+2023-09-12 17:28:40,128 INFO  [main] Clicking on element //button[contains(@aria-label,'Scrum')]
+2023-09-12 17:28:40,402 INFO  [main] Clicking on element //span[contains(.,'Use template')]
+2023-09-12 17:28:40,676 INFO  [main] Clicking on element //span[contains(.,'Select a company-managed project')]
+2023-09-12 17:28:44,169 INFO  [main] Clicking on element //span[contains(.,'Next')]
+2023-09-12 17:28:46,971 INFO  [main] Clicking on element //span[contains(.,'Go to project')]
+2023-09-12 17:28:47,283 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:47,284 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:48,065 INFO  [main] Clicking on element createButton
+2023-09-12 17:28:48,824 INFO  [main] Clicking on element dropdownMenu
+2023-09-12 17:28:50,711 INFO  [main] Clicking on element createIssueButton
+2023-09-12 17:28:51,002 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:51,003 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:54,024 INFO  [main] Clicking on element createButton
+2023-09-12 17:28:54,313 INFO  [main] Clicking on element dropdownMenu
+2023-09-12 17:28:56,285 INFO  [main] Clicking on element createIssueButton
+2023-09-12 17:28:56,588 INFO  [main] Initializing WebDriver
+2023-09-12 17:28:57,617 INFO  [main] Clicking on element //a[@data-testid='navigation-apps-sidebar-software-classic.ui.menu.issues-link--item']
+2023-09-12 17:28:58,082 INFO  [main] Clicking on element (//a[contains(@data-testid, 'issue-navigator.ui.issue-results.detail-view.card-list.card')])[2]
+2023-09-12 17:28:59,516 INFO  [main] Clicking on element //button[@data-testid='issue.issue-view.views.issue-base.foundation.quick-add.quick-add-item.link-issue']
+2023-09-12 17:28:59,977 INFO  [main] Quitting WebDriver
