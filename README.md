@@ -1,5 +1,4 @@
 # Homework Repository
-Collection of my QA homework from Telerik Academy.
 
 ## Overview
 This repository contains various homework assignments for assessment. Each assignment is organized into its own folder, complete with its own README file detailing the specifics of the project.
