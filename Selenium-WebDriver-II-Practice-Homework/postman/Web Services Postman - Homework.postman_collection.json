@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "b4d275cf-19de-4300-92a9-933bf2b3f608",
+		"name": "Web Services Postman - Homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28764946"
+	},
+	"item": [
+		{
+			"name": "Create Story",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes key\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.key).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes self\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.self).to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n    \"project\": {\r\n      \"key\": \"{{PROJECT_KEY}}\"\r\n    },\r\n    \"summary\": \"Development of HealthPlus Mobile App\",\r\n    \"description\": \"HealthPlus is a fitness tracker app designed to help users monitor their physical activities. Users should be able to log in, input different types of physical activities they engage in, and view useful statistics about these activities. Additionally, HealthPlus should provide personalized health suggestions based on the user's data. The goal of our app is to provide users with valuable insights and support to improve their physical health and wellness. \\n\\nPrerequisites: Functional user registration and login system, Database setup for storing users' physical activities data, API integration for data collection. \\n\\nAdditional Information: User Interface design should be clean and intuitive, with a clear distinction between different categories of physical activities.\",\r\n    \"issuetype\": {\r\n      \"name\": \"Story\"\r\n    }\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}",
+					"host": [
+						"{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bug",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes key\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.key).to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes self\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.self).to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n    \"project\": {\r\n      \"key\": \"{{PROJECT_KEY}}\"\r\n    },\r\n    \"summary\": \"App Crash when Accessing Statistics Page\",\r\n    \"description\": \"There is a critical issue occurring in the HealthPlus mobile app. Whenever a user navigates to the statistics page after inputting data about their physical activities, the app crashes. This bug is preventing users from accessing their activity data, thus blocking them from gaining insights into their physical activities and making informed health decisions. \\n\\nSteps to reproduce: Log into the app, Input physical activity data, Navigate to the statistics page. \\n\\nExpected result: The app should display statistics related to the inputted physical activities. \\n\\nActual result: The app crashes when the user tries to access the statistics page. \\n\\nSeverity: This is a high severity issue because it prevents users from accessing critical features of the app. \\n\\nPrerequisites: The user must have an account and must have inputted physical activity data. \\n\\nAdditional Information: This bug has been reported by multiple users across different devices and operating systems.\",\r\n    \"issuetype\": {\r\n      \"name\": \"Bug\"\r\n    }\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}",
+					"host": [
+						"{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Link Story and Bug",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response body is empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.eql(\"\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": {\r\n    \"name\": \"Blocks\",\r\n    \"inward\": \"is blocked by\",\r\n    \"outward\": \"blocks\"\r\n  },\r\n  \"inwardIssue\": {\r\n    \"key\": \"{{INWARD_ISSUE_KEY}}\"\r\n  },\r\n  \"outwardIssue\": {\r\n    \"key\": \"{{OUTWARD_ISSUE_KEY}}\"\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{BASE_URI}}{{API_VERSION}}{{ISSUE_LINK_ENDPOINT}}",
+					"host": [
+						"{{BASE_URI}}{{API_VERSION}}{{ISSUE_LINK_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attach Image",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes attachment details\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0]).to.have.property('id');\r",
+							"    pm.expect(jsonData[0]).to.have.property('filename');\r",
+							"    pm.expect(jsonData[0]).to.have.property('content');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "X-Atlassian-Token",
+						"value": "no-check",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/mmalk/Desktop/create-bug-image.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}{{INWARD_ISSUE_KEY}}{{ATTACHMENTS_ENDPOINT}}",
+					"host": [
+						"{{BASE_URI}}{{API_VERSION}}{{CREATE_ISSUE_ENDPOINT}}{{INWARD_ISSUE_KEY}}{{ATTACHMENTS_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{PASSWORD}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{USERNAME}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
